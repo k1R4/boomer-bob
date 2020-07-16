@@ -126,4 +126,4 @@ async function musicHandler(args, msg){
     }
 }
 
-bot.login(process.env.TOKEN);
+bot.login(config.token);
