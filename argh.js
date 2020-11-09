@@ -16,7 +16,7 @@ bot.on('ready', () => {
 bot.on('message', async msg => {
     if(msg.channel.type === 'dm') return;
     if(!mjson.mode[msg.guild.id]){
-        mjson.mode[msg.guild.id] = 'display';
+        mjson.mode[msg.guild.id] = 'legacy';
         fs.writeFile("./music.json", JSON.stringify(mjson), (err) => {
             if(err) console.error(err);
         })
